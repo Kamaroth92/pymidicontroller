@@ -76,6 +76,7 @@ device.loop()
 ```
 
 ## Future Plans
+  * **WRITE DOCUMENTATION**
   * Add Spotify functionality via [spotipy](https://github.com/plamere/spotipy)
   * Add Discord functionality via [discord.py](https://github.com/Rapptz/discord.py)
   * Add the ability to get the current state of each control on initialization. I believe this will require a midi controller with the sys_ex function to support this but I know pretty little about sys_ex messages.

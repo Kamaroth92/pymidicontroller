@@ -10,6 +10,8 @@ Currently included targets are:
   * Homeassistant (via REST API)
   * Windows Volume Mixer (via [pycaw](https://github.com/AndreMiras/pycaw))
 
+**Note: This library is in need of refactoring as the way things were done was changed multiple times during the devlopment, therefore please be aware that there may be upcoming breaking changes.**
+
 ## Installation
 Clone the repo and run ```pip install .``` from the cloned directory.
 

@@ -2,7 +2,16 @@
 
 ## Introduction
 
-Easily map device and application controls to a midi controller
+Easily map device and application controls to a midi controller  
+Example video availble here: https://streamable.com/ie5jtt
+
+This library is ideally not only easy to use but also easy to extend with additional targets.
+Currently included targets are:  
+  * Homeassistant (via REST API)
+  * Windows Volume Mixer (via [pycaw](https://github.com/AndreMiras/pycaw))
+
+## Installation
+Clone the repo and run ```pip install .``` from the cloned directory.
 
 ## Usage
 ```python
@@ -60,6 +69,3 @@ device.register_mapping(1, 5, r6_volume)
 
 device.loop()
 ```
-## Installation
-
-Clone the repo and run ```pip install .``` from the cloned directory.

@@ -46,26 +46,26 @@ circadian_lighting = homeassistant.Switch(entity_id='switch.circadian_lighting_c
 power_switch_02 = homeassistant.Switch(entity_id='switch.iot_kem_02_plug', client=homeassistant_client)
 cycle_color_mode = arbitrary.Toggle(func=bedroom_lights.change_colour_mode)
 
-master_volume =     volumemixer.Device()
-spoitfy_volume =    volumemixer.Application(application='Spotify.exe')
-discord_volume =    volumemixer.Application(application='Discord.exe')
-tarkov_volume =     volumemixer.Application(application='EscapeFromTarkov.exe')
-r6_volume =         volumemixer.Application(application='RainbowSix.exe')
+master_volume = volumemixer.Device()
+spoitfy_volume = volumemixer.Application(application='Spotify.exe')
+discord_volume = volumemixer.Application(application='Discord.exe')
+tarkov_volume = volumemixer.Application(application='EscapeFromTarkov.exe')
+r6_volume = volumemixer.Application(application='RainbowSix.exe')
 
 #Create controllers and map them to controllable objects
 #device.register_mapping(CHANNEL, CONTROL, TARGET, EXTRA_DATA)
+
 device.register_mapping(1, 21, bedroom_lights,'brightness_channel')
-
-device.register_mapping(1, 9, bedroom_lights,'hue_channel')
-device.register_mapping(1, 10, bedroom_lights,'saturation_channel')
-
 device.register_mapping(1, 8, bedroom_lights,'red_channel')
 device.register_mapping(1, 9, bedroom_lights,'green_channel')
+device.register_mapping(1, 9, bedroom_lights,'hue_channel')
 device.register_mapping(1, 10, bedroom_lights,'blue_channel')
+device.register_mapping(1, 10, bedroom_lights,'saturation_channel')
 
 device.register_mapping(1, 29, power_switch_02)
 device.register_mapping(1, 30, cycle_color_mode)
 device.register_mapping(1, 31, circadian_lighting)
+
 device.register_mapping(1, 11, master_volume)
 device.register_mapping(1, 3, spoitfy_volume)
 device.register_mapping(1, 4, discord_volume)

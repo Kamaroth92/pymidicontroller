@@ -53,6 +53,7 @@ tarkov_volume =     volumemixer.Application(application='EscapeFromTarkov.exe')
 r6_volume =         volumemixer.Application(application='RainbowSix.exe')
 
 #Create controllers and map them to controllable objects
+#device.register_mapping(CHANNEL, CONTROL, TARGET, EXTRA_DATA)
 device.register_mapping(1, 21, bedroom_lights,'brightness_channel')
 
 device.register_mapping(1, 9, bedroom_lights,'hue_channel')

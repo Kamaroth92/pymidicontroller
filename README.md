@@ -14,12 +14,16 @@ Currently included targets are:
 Clone the repo and run ```pip install .``` from the cloned directory.
 
 ## Usage
+The following shows my currently in-use implementation of the library. It demonstrates both the volumemixer and homeassistant extensions as well as how you may decide to control multiple targets with the same controlclass. (i.e. same slider controlling multiple application audios, or multiple lights)
+
 ```python
 from pymidicontroller.classes.controller import Controller
 from pymidicontroller.extensions import *
 import mido
 
 my_midi_controller = "WORLDE easy CTRL"  ##CHANGEME
+homeassistant_uri = "https://my-home-assistant"  ##CHANGEME
+homeassistant_token = "3fs0eXAsfOiJKV1QiL...."  ##CHANGEME
 
 if __name__ == '__main__':
 dev = my_midi_controller
@@ -32,8 +36,6 @@ if dev != None:
 
 device = Controller(device_name)
 
-homeassistant_uri = "https://my-home-assistant"  ##CHANGEME
-homeassistant_token = "3fs0eXAsfOiJKV1QiL...."  ##CHANGEME
 homeassistant_client = homeassistant.Client(homeassistant_uri, homeassistant_token)
 
 #Create controllable objects

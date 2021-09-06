@@ -74,3 +74,9 @@ device.register_mapping(1, 5, r6_volume)
 
 device.loop()
 ```
+
+## Future Plans
+  * Add Spotify functionality via [spotipy](https://github.com/plamere/spotipy)
+  * Add Discord functionality via [discord.py](https://github.com/Rapptz/discord.py)
+  * Add the ability to get the current state of each control on initialization. I believe this will require a midi controller with the sys_ex function to support this but I know pretty little about sys_ex messages.
+  * Add functionality to change between channels or banks without relying on the controller to have a bank switch.
